@@ -1,3 +1,51 @@
-#app link {
+#app body {
+  font-family: "Poppins";
+}
+
+link {
   font-size: large;
+}
+
+.global-button {
+  padding: 10px 20px;
+  width: auto;
+  margin: 4px;
+  border-radius: 5px;
+  border-style: none;
+  background-color: #35495e;
+  font-weight: bold;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: 0.4s ease;
+  color: #fff;
+}
+
+.global-button:hover {
+  cursor: pointer;
+  color: #fff;
+  background-color: #346d53;
+}
+
+.global-button:active {
+  transform: scale(0.9) translate(0, 4px);
+}
+
+input {
+  padding: 6px;
+  width: 55%;
+  margin: 4px;
+  border-radius: 4px;
+  border-style: none;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: 0.3s ease;
+}
+input:focus {
+  outline: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-color: #ffca47;
+}
+
+.item-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

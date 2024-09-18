@@ -4,13 +4,20 @@
       <img src="../../assets/pinia-logo.svg" alt="pinia" width="45px" />
       <h2>Pinia Shop</h2>
       <RouterLink to="/home"> <h2>Home</h2></RouterLink>
+      <input for="search" type="text" placeholder="Search product.." />
       <div class="cart-wrapper"></div>
-      <RouterLink to="/cart"> <h2>Cart(0)</h2></RouterLink>
+      <RouterLink to="/cart">
+        <h2>Cart ({{ store.getTotalCart }})</h2></RouterLink
+      >
     </div>
   </nav>
 </template>
 
-<script setup></script>
+<script setup>
+import { useAppStore } from "@/stores/store";
+
+const store = useAppStore();
+</script>
 
 <style scoped>
 .navbar {

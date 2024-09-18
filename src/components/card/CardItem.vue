@@ -5,14 +5,19 @@
       <div>
         <h2>{{ product.name }}</h2>
         <p>{{ product.text }}</p>
-        <button>Add to Cart</button>
+        <button @click="store.addToCart(product)" class="global-button">
+          Add to Cart
+        </button>
       </div>
     </div>
   </div>
 </template>
 
 <script setup>
+import { useAppStore } from "@/stores/store";
 import { defineProps } from "vue";
+
+const store = useAppStore();
 
 const props = defineProps({
   product: {

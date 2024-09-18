@@ -6,7 +6,7 @@
         v-for="product in store.products"
         :key="product.id"
       >
-        <SingleCard :product="product" />
+        <CardItem :product="product" />
       </div>
     </div>
   </div>
@@ -14,16 +14,14 @@
 
 <script setup>
 import { useAppStore } from "@/stores/store";
-import { storeToRefs } from "pinia";
-import SingleCard from "./SingleCard.vue";
+import CardItem from "./CardItem.vue";
 
 const store = useAppStore();
-const { products } = storeToRefs(store);
 </script>
 
 <style scoped>
 .products-wrapper {
-  width: 85%;
+  width: 75%;
   margin: 0 auto;
   display: flex;
   flex-flow: row wrap;
