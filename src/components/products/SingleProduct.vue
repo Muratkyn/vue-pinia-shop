@@ -15,7 +15,6 @@
 
 <script setup>
 import { useAppStore } from "@/stores/store";
-import { defineProps } from "vue";
 
 const store = useAppStore();
 

@@ -7,10 +7,11 @@
       <input for="search" type="text" placeholder="Search product.." />
       <div class="cart-wrapper"></div>
       <RouterLink to="/cart">
-        <h2>Cart ({{ store.getTotalCart }})</h2></RouterLink
+        <h2>Cart ({{ store.getTotalItem }})</h2></RouterLink
       >
     </div>
   </nav>
+  s
 </template>
 
 <script setup>
@@ -52,16 +53,8 @@ h2:hover {
 
 img {
   max-width: 60px;
-  animation: rotater 5s alternate-reverse infinite;
 }
-@keyframes rotater {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+
 .cart-wrapper {
   margin-left: auto;
 }

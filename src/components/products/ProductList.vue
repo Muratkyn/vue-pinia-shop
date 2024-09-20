@@ -6,7 +6,7 @@
         v-for="product in store.products"
         :key="product.id"
       >
-        <CardItem :product="product" />
+        <SingleProduct :product="product" />
       </div>
     </div>
   </div>
@@ -14,7 +14,7 @@
 
 <script setup>
 import { useAppStore } from "@/stores/store";
-import CardItem from "./CardItem.vue";
+import SingleProduct from "./SingleProduct.vue";
 
 const store = useAppStore();
 </script>

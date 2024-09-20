@@ -1,11 +1,11 @@
 <template>
   <div>
-    <CardList></CardList>
+    <ProductList></ProductList>
   </div>
 </template>
 
 <script setup>
-import CardList from "../card/CardList.vue";
+import ProductList from "../products/ProductList.vue";
 </script>
 
 <style lang="scss" scoped></style>
