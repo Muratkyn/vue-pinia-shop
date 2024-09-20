@@ -33,7 +33,7 @@ export const products = [
   },
   {
     id: 5,
-    name: "Huwawei Mate",
+    name: "Iphone 14",
     text: "Lorem Ipsum è un testo segnaposto utilizzato nel settore della tipografia e della stampa.",
     price: 900,
     image:
@@ -41,7 +41,15 @@ export const products = [
   },
   {
     id: 6,
-    name: "Huwawei Mate",
+    name: "Samsung s12",
+    text: "Lorem Ipsum è un testo segnaposto utilizzato nel settore della tipografia e della stampa.",
+    price: 900,
+    image:
+      "https://celebrityraid.com/wp-content/uploads/2018/02/Smartphone-Mobile-Cellphone-Cell-Phone-Telephone-1253244-1-768x510.jpg",
+  },
+  {
+    id: 6,
+    name: "Iphone 15",
     text: "Lorem Ipsum è un testo segnaposto utilizzato nel settore della tipografia e della stampa.",
     price: 900,
     image:
