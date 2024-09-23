@@ -7,6 +7,7 @@ export const useAppStore = defineStore("store", {
       products,
       cartItems: [],
       cartTotal: 0,
+      searchValue: "",
     };
   },
   actions: {
@@ -50,11 +51,18 @@ export const useAppStore = defineStore("store", {
     cartIsEmpty() {
       return this.cartItems.length <= 0;
     },
-    filteredProducts: (state) => (searchTerm) => {
-      if (!searchTerm) return state.products;
-      return state.products.filter((product) =>
-        product.name.toLowerCase().includes(searchTerm.toLowerCase())
-      );
+    // getTotalValue() {
+    //   let total = 0;
+    //   this.cartItems.forEach((item) => {
+    //     total += item.quantity * item.price;
+    //   });
+    //   return (this.cartTotal = total);
+    // },
+    getTotalValue() {
+      return (this.cartTotal = this.cartItems.reduce(
+        (total, item) => total + item.quantity * item.price,
+        0
+      ));
     },
   },
 });
