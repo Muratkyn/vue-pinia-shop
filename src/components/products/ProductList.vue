@@ -3,20 +3,34 @@
     <div class="products-wrapper">
       <div
         class="product-item"
-        v-for="product in store.products"
+        v-for="product in filteredProducts"
         :key="product.id"
       >
         <SingleProduct :product="product" />
+      </div>
+      <div v-if="filteredProducts.length <= 0">
+        <h1 style="color: red">No item found..</h1>
       </div>
     </div>
   </div>
 </template>
 
 <script setup>
-import { useAppStore } from "@/stores/store";
+import { computed } from "vue";
+import { useAppStore } from "@/store/store";
 import SingleProduct from "./SingleProduct.vue";
 
 const store = useAppStore();
+
+const filteredProducts = computed(() => {
+  const searchItem = store.searchValue.toLowerCase();
+  if (searchItem) {
+    return store.products.filter((product) =>
+      product.name.toLowerCase().includes(searchItem.toLowerCase())
+    );
+  }
+  return store.products;
+});
 </script>
 
 <style scoped>

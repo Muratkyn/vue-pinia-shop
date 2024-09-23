@@ -4,7 +4,12 @@
       <img src="../../assets/pinia-logo.svg" alt="pinia" width="45px" />
       <h2>Pinia Shop</h2>
       <RouterLink to="/home"> <h2>Home</h2></RouterLink>
-      <input for="search" type="text" placeholder="Search product.." />
+      <input
+        for="search"
+        type="text"
+        placeholder="Search product.."
+        v-model="store.searchValue"
+      />
       <div class="cart-wrapper"></div>
       <RouterLink to="/cart">
         <h2>Cart ({{ store.getTotalItem }})</h2></RouterLink
@@ -15,7 +20,7 @@
 </template>
 
 <script setup>
-import { useAppStore } from "@/stores/store";
+import { useAppStore } from "@/store/store";
 
 const store = useAppStore();
 </script>

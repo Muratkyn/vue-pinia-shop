@@ -14,7 +14,8 @@
 </template>
 
 <script setup>
-import { useAppStore } from "@/stores/store";
+import { defineProps } from "vue";
+import { useAppStore } from "@/store/store";
 
 const store = useAppStore();
 
