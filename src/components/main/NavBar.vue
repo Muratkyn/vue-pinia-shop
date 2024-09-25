@@ -16,7 +16,6 @@
       >
     </div>
   </nav>
-  s
 </template>
 
 <script setup>
