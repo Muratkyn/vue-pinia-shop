@@ -16,9 +16,7 @@
 </template>
 
 <script setup>
-import { computed } from "vue";
 import { useAppStore } from "@/store/store";
-import { defineProps } from "vue";
 
 const props = defineProps({
   item: {
